@@ -1,0 +1,23 @@
+@use '../../../scss/variables';
+
+.link {
+    border: none;
+    background: none;
+    color: variables.$blue;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover {
+        color: variables.$dark-blue;
+        text-decoration: underline;
+    }
+
+    &.link-disable {
+        color: variables.$grey;
+        cursor: default;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@use "../../../scss/variables";
+
+$img-size: 100px;
+$card-size: 250px;
+
+
+.card {
+    height: $card-size;
+    width: $card-size;
+    box-shadow: variables.$box-shadow;
+
+    .card-body {
+        .card-content {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: variables.$space-1-x;
+
+            .card-img {
+                width: $img-size;
+                height: $img-size;
+
+                img {
+                    width: $img-size;
+                    height: $img-size;
+                }
+            }
+
+            .card-details {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex: 1;
+                margin-left: variables.$space-1-x;
+                overflow: hidden;
+
+                .card-title {
+                    margin-bottom: variables.$space-1-and-a-half-x;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@use "../scss/variables";
+@use "../scss/mixins";
+
+.pokemon-list {
+    padding: variables.$space-3-and-a-half-x;
+    .title-panel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: variables.$space-2-and-a-half-x;
+
+        @include mixins.screen {
+            flex-direction: column;
+            align-items: unset;
+        }
+
+        .right-panel {
+            display: flex;
+            align-items: center;
+
+            @include mixins.screen {
+                justify-content: space-between;
+                margin-top: variables.$space-1-x;
+            }
+
+            .sort-panel {
+                display: flex;
+                align-items: center;
+
+                .sort-link {
+                    margin-left: variables.$space-1-x;
+                }
+            }
+
+            .record-count {
+                margin: 0 variables.$space-1-x;
+            }
+        }
+    }
+
+    .pokemon-list-content {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: variables.$space-2-x 0;
+
+        .pokemon-details {
+            margin: variables.$space-1-x;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+<div class="sort-link">
+    <app-link (onLinkClick)="onSort()">
+        <ng-content></ng-content>
+    </app-link>
+    <i *ngIf="sortType == Sort.Asc" class="bi bi-arrow-up arrow"></i>
+    <i *ngIf="sortType == Sort.Desc" class="bi bi-arrow-down arrow"></i>
+</div>

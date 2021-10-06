@@ -1,0 +1,23 @@
+@use "../../../scss/variables";
+
+.search-box {
+    .search-box-wrapper {
+        position: relative;
+
+        .search-box-input {
+            border-radius: 16px;
+            padding: variables.$space-three-quarter-x variables.$space-5-x variables.$space-three-quarter-x
+                variables.$space-1-and-a-half-x;
+            border: 1px solid variables.$grey;
+            outline: none;
+            width: 100%;
+        }
+        .search-box-icon-btn {
+            border: none;
+            background: none;
+            position: absolute;
+            top: variables.$space-three-quarter-x;
+            right: variables.$space-three-quarter-x;
+        }
+    }
+}

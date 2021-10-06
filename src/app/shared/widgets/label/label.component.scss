@@ -1,0 +1,49 @@
+@use "../../../scss/variables";
+
+.label {
+    overflow: hidden;
+    
+    label {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &.label-multiline {
+            white-space: pre-wrap;
+            line-height: 20px;
+        }
+    }
+
+    .label-fw-light {
+        font-weight: variables.$font-weight-light;
+    }
+
+    .label-fw-normal {
+        font-weight: variables.$font-weight-normal;
+    }
+
+    .label-fw-bold {
+        font-weight: variables.$font-weight-bold;
+    }
+
+    .label-fs-xsmall {
+        font-size: variables.$font-size-xsmall;
+    }
+
+    .label-fs-small {
+        font-size: variables.$font-size-small;
+    }
+
+    .label-fs-medium {
+        font-size: variables.$font-size-medium;
+    }
+
+    .label-fs-large {
+        font-size: variables.$font-size-large;
+    }
+
+    .label-fs-xlarge {
+        font-size: variables.$font-size-xlarge;
+    }
+}

@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-body">
+        <div class="card-content">
+            <div class="card-img">
+                <img [src]="pokemon.imageUrl"
+                    alt="Test">
+            </div>
+            <div class="card-details">
+                <app-label class="card-title" [fontSize]="FontSize.Xlarge" [fontWeight]="FontWeight.Bold">
+                    {{pokemon.name}}</app-label>
+                <app-label>Height: {{pokemon.height}}</app-label>
+                <app-label>Weight: {{pokemon.weight}}</app-label>
+            </div>
+        </div>
+        <app-label [lineCount]="4">Abilities: {{pokemon.abilities}}</app-label>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="search-box">
+    <div class="search-box-wrapper">
+        <input class="search-box-input" type="text" [placeholder]="placeholder" id="txtSearch" [(ngModel)]='search' (keyup.enter)="searchClick()">
+        <button class="search-box-icon-btn" type="button" (click)="searchClick()">
+            <i class="bi bi-search"></i>
+        </button>
+    </div>
+</div>

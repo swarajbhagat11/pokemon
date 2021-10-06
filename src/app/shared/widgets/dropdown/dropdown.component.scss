@@ -1,0 +1,10 @@
+@use "../../../scss/variables";
+
+.dropdown {
+    .select {
+        padding: variables.$space-half-x;
+        border: 1px solid variables.$grey;
+        border-radius: 6px;
+        outline: none;
+    }
+}

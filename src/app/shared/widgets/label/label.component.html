@@ -1,0 +1,5 @@
+<div class="label" [style]="{height: lineCount > 1 ? lineCount * 20 + 'px': 'auto'}">
+    <label #appLabel [title]="appLabel.innerText" [ngClass]="cssClass">
+        <ng-content></ng-content>
+    </label>
+</div>

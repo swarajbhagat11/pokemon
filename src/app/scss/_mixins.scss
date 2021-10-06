@@ -1,0 +1,12 @@
+$screen-size: (
+    "xsmall": 480px,
+    "small": 600px,
+    "medium": 768px,
+    "large": 1024px,
+);
+
+@mixin screen($size: "small") {
+    @media only screen and (max-width: map-get($screen-size, $size)) {
+        @content;
+    }
+}

@@ -1,0 +1,14 @@
+@use "../../scss/variables";
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+
+    .nevigation-link-left {
+        margin-left: variables.$space-1-x;
+    }
+
+    .nevigation-link-right {
+        margin-right: variables.$space-1-x;
+    }
+}

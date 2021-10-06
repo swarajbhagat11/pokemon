@@ -1,0 +1,36 @@
+<div class="pokemon-list">
+    <div class="title-panel">
+        <app-search-box placeholder="name or ability" [(search)]="storeData.search" (onSearch)="searchPokemon()">
+        </app-search-box>
+        <div class="right-panel">
+            <div class="sort-panel">
+                <app-sort-link class="sort-link" [(sortType)]="storeData.sort.name"
+                    (onSorting)="onSorting(SortBy.Name)">Name</app-sort-link> |
+                <app-sort-link class="sort-link" [(sortType)]="storeData.sort.height"
+                    (onSorting)="onSorting(SortBy.Height)">Height
+                </app-sort-link> |
+                <app-sort-link class="sort-link" [(sortType)]="storeData.sort.weight"
+                    (onSorting)="onSorting(SortBy.Weight)">Weight
+                </app-sort-link>
+            </div>
+            <app-dropdown class="record-count" id="ddRecordCount" name="ddrecordCount"
+                [(selectedValue)]="storeData.recordCount" [ddOptions]="recordCountList"
+                (onSelect)="onSelectRecordCount()"></app-dropdown>
+        </div>
+    </div>
+
+    <app-navigation [disablePreviousLink]="pokemonList.previous == null" [disableNextLink]="pokemonList.next == null"
+        (onPreviousClick)="onPreviousLinkClick()" (onNextClick)="onNextLinkClick()"></app-navigation>
+
+    <div class="pokemon-list-content">
+        <div class="pokemon-details" *ngFor="let pokemon of pokemons">
+            <app-card [pokemon]="pokemon"></app-card>
+        </div>
+        <div class="pokemon-details" *ngIf="pokemons.length == 0">
+            <app-label [fontSize]="FontSize.Xlarge" [fontWeight]="FontWeight.Bold">No result found...</app-label>
+        </div>
+    </div>
+
+    <app-navigation [disablePreviousLink]="pokemonList.previous == null" [disableNextLink]="pokemonList.next == null"
+        (onPreviousClick)="onPreviousLinkClick()" (onNextClick)="onNextLinkClick()"></app-navigation>
+</div>

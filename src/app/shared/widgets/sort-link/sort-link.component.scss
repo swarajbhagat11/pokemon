@@ -1,0 +1,11 @@
+@use "../../../scss/variables";
+
+.sort-link {
+    position: relative;
+    padding-right: variables.$space-1-and-a-half-x;
+
+    .arrow {
+        position: absolute;
+        right: -2px;
+    }
+}
